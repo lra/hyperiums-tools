@@ -27,7 +27,7 @@ while lines.first[0].chr == "#"
 	lines.shift
 end
 
-# on cherche la tag demandé toutes les 3 lignes
+# on cherche la tag demandÃ© toutes les 3 lignes
 0.step(lines.length, 3) { |i|
 	if lines[i]
 		print lines[i].split[0] + "\n"

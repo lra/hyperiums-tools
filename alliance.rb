@@ -8,9 +8,9 @@
 # 0.1 : - premiere version
 # 0.2 : - resolution d'un probleme pour les alliances sans president
 #       - n'affiche pas le president s'il n'existe pas
-# 0.2.1 : - bug a la con corrigé
+# 0.2.1 : - bug a la con corrigÃ©
 # 0.2.2 : - bug sur le formatage des nb negatifs
-# 0.2.3 : - cosmétique
+# 0.2.3 : - cosmÃ©tique
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -59,7 +59,7 @@ class Alliance
 		if president.length > 0
 			print "President : #{president} - "
 		end
-		print "Nombre de planètes : #{format(planets)} "
+		print "Nombre de planÃ¨tes : #{format(planets)} "
 		if planets_yesterday
 			planets_diff = planets.to_i - planets_yesterday.to_i
 			if planets_diff >= 0
@@ -106,7 +106,7 @@ while lines.first[0].chr == "#"
 	lines.shift
 end
 
-# on cherche la tag demandé toutes les 3 lignes
+# on cherche la tag demandÃ© toutes les 3 lignes
 0.step(lines.length, 3) { |i|
 	# on check le tag
 	if lines[i] =~ /^#{ARGV[0]} /i
@@ -131,7 +131,7 @@ if File.exists?(ALLIANCE_FILE_YESTERDAY)
 		lines.shift
 	end
 
-	# on cherche la tag demandé toutes les 3 lignes
+	# on cherche la tag demandÃ© toutes les 3 lignes
 	0.step(lines.length, 3) { |i|
 		# on check le tag
 		if lines[i] =~ /^#{ARGV[0]} /i
@@ -142,9 +142,9 @@ if File.exists?(ALLIANCE_FILE_YESTERDAY)
 	}
 end
 
-# si une alliance a été trouvée, on l'affiche
+# si une alliance a Ã©tÃ© trouvÃ©e, on l'affiche
 if alliance.tag then
 	alliance.info
 else
-	print "Aucune alliance portant le tag #{ARGV[0]} trouvée\n"
+	print "Aucune alliance portant le tag #{ARGV[0]} trouvÃ©e\n"
 end
